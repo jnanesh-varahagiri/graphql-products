@@ -1,0 +1,25 @@
+type Query {
+  category: [Category]
+  product: [Product]
+}
+
+type Category {
+  name: String
+  icon: String
+  color: String
+}
+
+type Product {
+  id: ID
+  name: String
+  description: String
+  richDescription: String
+  image: String
+  brand: String
+  price: Int
+  countInStock: Int
+  category[id: ID!]: Category
+  rating: Int
+  isFeatured: Boolean
+  dateCreated: String
+}
